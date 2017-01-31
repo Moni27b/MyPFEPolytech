@@ -81,7 +81,7 @@ else {
                 <!-- On selectionne les donneés de la base Mysql -->
                 <?php include("Select_Data.php"); ?>
 
-                      <div id="container" style="width:100%; height:400px;"></div>
+                      <div id="appareils" style="width:100%; height:400px;"></div>
                       <div id="user" style="width:100%; height:400px;"></div>
                     </div>
                   </div>

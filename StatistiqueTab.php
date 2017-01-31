@@ -56,7 +56,7 @@
 
     <div class="container">
       <?php include("CalculTab.php");?>
-      <h2 class="sub-header">Tableau details des mesures </h2>
+      <h2 class="sub-header">Tableau des mesures </h2>
 
       <div class="panel-body">
 
@@ -69,13 +69,13 @@
          </div>
 
       <!-- Table -->
+
       <table id="example" class="table table-bordered">
         <thead>
           <tr class="filters">
                <th><input type="text" class="form-control" placeholder="Nom de l'appareil" disabled></th>
-               <th><input type="text" class="form-control" placeholder="Dureé d'utilisation (h)" disabled></th>
-               <th><input type="text" class="form-control" placeholder="Date debut" disabled></th>
-               <th><input type="text" class="form-control" placeholder="Date fin" disabled></th>
+               <th><input type="text" class="form-control" placeholder="Date" disabled></th>
+               <th><input type="text" class="form-control" placeholder="Dureé d'utilisation (h) " disabled></th>
                <th><input type="text" class="form-control" placeholder="Localisation" disabled></th>
 
            </tr>
@@ -83,15 +83,17 @@
             <?php for($i = 0; $i < $nb/2; $i+=1) {?>
                     <tr>
                       <td  style="text-align:center;"><? echo $id[$i]; ?></td>
-                      <td  style="text-align:center;"><? echo $total[$i]; ?></td>
-                      <td  style="text-align:center;"><? echo $datedebut[$i]; ?></td>
                       <td  style="text-align:center;"><? echo $datefin[$i]; ?></td>
-                      <td  style="text-align:center;"><? echo $loca[$i]; ?></td>
+                      <td  style="text-align:center;"><? echo $total[$i]; ?></td>
+                      <td  style="text-align:center;"><? echo $locat[$i]; ?></td>
+
                     </tr>
              <?php } ?>
       </table>
      </div>
+
      </div>
+
    </div>
  </div>
 </div>
@@ -103,16 +105,27 @@
     <script src="js/filtre.js"></script>
     <script src="js/script.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        } );
+              $(document).ready(function() {
+                    $('#example').DataTable( {
+                       "order": [[ 1, "desc" ]],
+                      dom: 'Bfrtip',
+                      buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                        } );
+                      } );
+
+
+
     </script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
-
-
-
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
 
 
 

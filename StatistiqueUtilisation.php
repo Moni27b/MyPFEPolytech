@@ -72,7 +72,8 @@
           </select>
         </div>
        </form>
-         <div id="Filtre" style="width:100%; height:400px;"></div>
+       <h4  >Total des heures d'utilisation: </4> <kbd class="bg-primary text-white" id="sum"></kbd>
+         <div id="Filtre" style=" margin-top: 40px; width:100%; height:400px;"></div>
 
 
 

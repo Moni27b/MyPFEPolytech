@@ -51,8 +51,8 @@
 
           <div id="localisation" style="width:100%; height:400px;"></div>
           <div id="Calculs" style="width:100%; height:400px;"></div>
-          <div id="Mesure" style="width:100%; height:400px;"></div>
-
+          <div id="OnOff" style="width:100%; height:400px;"></div>
+            <div id="test" style="width:100%; height:400px;"></div>
 
 
 
@@ -65,6 +65,7 @@
     <?php include("buttom.php"); ?>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
     <script src="js/chart.js"></script>
 
 

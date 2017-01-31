@@ -61,19 +61,21 @@
       <h2 class="sub-header">Indicateur de localisation </h2>
 
   <!-- Selection appareil ------------------------>
-      <div class="form-group">
-        <label for="Num_CB">Selectionner l'appareil</label>
+      <div   class="form-group">
+        <h4 for="Num_CB">Selectionner l'appareil</h4>
         <select  class="form-control" id="appLoc" name="appLoc">
           <option  > Choisir </option>
           <?php while($row = $resultApp->fetch()) {?>
-          <option  ><? echo $res = $row['Nom']; ?></option>
+          <option ><? echo $res = $row['Nom']; ?></option>
 
 
             <?php } ?>
         </select>
       </div>
 
-       <div id="FiltreLoc" style="width:100%; height:400px;"></div>
+
+        <h4  >Derniere Localisation: </4> <kbd class="bg-primary text-white" id="demo"></kbd>
+       <div  id="FiltreLoc" style=" margin-top: 40px; width:100%; height:400px;"></div>
    </div>
  </div>
 </div>

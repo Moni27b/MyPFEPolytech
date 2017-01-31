@@ -49,19 +49,23 @@ for($i = 0; $i < $nb/2; $i+=1){
     // Afficher date
 
 
-    $date1 = $time->format('d-m-Y');
-    $date2 = $timenow->format('d-m-Y');
-    $date3 = $timenow->format('d-m-Y');
+    $date1 = $time->format('Y-m-d');
+    $date2 = $timenow->format('Y-m-d');
+
 
   	// Afficher la difference
     //echo '<br>';
-      
+
   	 $jours = $interval->format('%d');
      $heures = $interval->format('%h');
      $minutes = $interval->format('%i');
 
+
+
+
+
      // Convertir les jours en heures
-     $minutes = round($heures/60, 2);
+     $minutes = round($heures/60, 1);
       $jr = 24*$jours;
 
       $total =  $jr + $heures + $minutes ;
@@ -69,7 +73,8 @@ for($i = 0; $i < $nb/2; $i+=1){
 
 
 
-     $info =array( "Nom_Appareil" => $id[$i],"total" => $total, "datedebut" =>$date1, "datefin" => $date2 , "year" => $date3);
+
+     $info =array( "Nom_Appareil" => $id[$i],"total" => $total, "datedebut" =>$date1, "datefin" => $date2 );
      $selectdata[]=$info;
      // Durée d'utilisation
      /*if ($date1 == $date2){
@@ -78,6 +83,7 @@ for($i = 0; $i < $nb/2; $i+=1){
               echo   'Appareil: '.$id[$i].' A la durée d\'utilisation est '.$jours.' et '.$heures.' '.$minutes.'entre le  '.$date1.'  et le  '.$date2;
      }*/
 }
+
 
   echo json_encode($selectdata);
 

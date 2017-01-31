@@ -18,7 +18,7 @@
     <!-- Custom styles for this template -->
     <link href="style/style.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet" >
-
+    <link href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css" rel="stylesheet">
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
 

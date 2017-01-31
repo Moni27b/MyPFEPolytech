@@ -20,10 +20,10 @@ for($i = 0; $i < $nb; $i+=2) {
   //echo $i.'<br>';
    $datedebut[] = $date[$i] ;
   $id[] = $tracker[$i];
-  $loca[]=$loca[$i];
+  $locat[]=$loca[$i];
 
-  //echo 'id '.$id[].'date '.$datedebut[];
-  //echo '<br>';
+
+
 }
 
 /*    Recuperer la date de fin , mode = OFF */
@@ -31,9 +31,9 @@ for($i = 1; $i < $nb; $i+=2) {
   //echo $i.'<br>';
    $datefin[] = $date[$i];
   $id[] = $tracker[$i];
-  $loca[]=$loca[$i];
+  $locat[]=$loca[$i];
 
-//  echo '<br>';
+
 }
 
 /* recuper le nombre d'heure d'utilisation*/
@@ -56,7 +56,8 @@ for($i = 0; $i < $nb/2; $i+=1){
     $datefin[$i] = $datefin[$i]->format('d-m-Y');
 
     // localisation
-    $loca[]=$loca[$i];
+    //$loca[]=$loca[$i];
+
   	// Afficher la difference
     //$annee[$i] = $interval->format('Y');
     //$mois[$i] = $interval->format('m');
@@ -70,12 +71,13 @@ for($i = 0; $i < $nb/2; $i+=1){
       $jr[$i] = 24*$jours[$i];
       $total[$i] = $jr[$i] + $heures[$i] + $minutes[$i];
 
-      $taux[$i] = $total[$i] * 0.1;
+
 
 
 
 
 }
+
 
 
 
